@@ -16,6 +16,22 @@
     		<div class="blurb">
         		<h1>Hi there, I'm Hank Quinlan!</h1>
 				<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
+<script type="text/javascript">
+  window.onload = function() { init() };
+
+  var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1bExPVxkA3Qs4sOzYs0iVFVPLCufN4krkSx7qxLjZwKA/pubhtml';
+
+  function init() {
+    Tabletop.init( { key: publicSpreadsheetUrl,
+                     callback: showInfo,
+                     simpleSheet: true } )
+  }
+
+  function showInfo(data, tabletop) {
+    alert("Successfully processed!")
+    console.log(data);
+  }
+</script>
     		</div><!-- /.blurb -->
 		</div><!-- /.container -->
 		<footer>
